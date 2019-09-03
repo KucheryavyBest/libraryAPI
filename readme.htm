@@ -1,47 +1,79 @@
-<!-- #######  YAY, I AM THE SOURCE EDITOR! #########-->
-<p><strong>Install readme.</strong></p>
-<p>1.Unzip code.zip to some directory.</p>
-<p>2.Create database on MySql Server and write credentials in api_conf.php</p>
-<p>3.Open by browrer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/install/install.php or exec library.sql in database console.</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p><strong>API Documentation.</strong></p>
-<p>All API-Call URLs starts from &lsquo;api&rsquo;&nbsp; &nbsp;like &nbsp;&nbsp;&nbsp;&nbsp;http://localhost/library/api/book/genre/Satire/Play</p>
-<p>Book method.</p>
-<p>GET&nbsp;&nbsp; /api/book/ -return list of all books</p>
-<p>GET&nbsp;&nbsp; /api/book/{id} -return book with book_id ={id}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id} - int</p>
-<p>GET&nbsp;&nbsp; /api/book/author/{name} -return book with book author name = {name}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name} - string</p>
-<p>GET&nbsp;&nbsp; /api/book/name/{name} -return book with book name = {name}</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name} - string</p>
-<p>GET&nbsp;&nbsp; /api/book/genre/{name1}/{name2}/&hellip;/{nameN} &hellip; &nbsp;- return book with book genre name = { genre1 } and genre name &nbsp;= { genre2 } and genre name = { genreN }</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name1} - string</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name2} - string</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {nameN} - string</p>
-<p>POST /api/book/&nbsp;&nbsp; - create new Book</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name_book} : string</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {first_pub_year}: int</p>
-<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; {avarage_price}:&nbsp; float(10,2)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id_publishing_house}: int</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {list_genre} &ndash; array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { list_autors } &ndash; array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {word_count}: int</p>
-<p>DELETE /api/book/{id}&nbsp;&nbsp; - remove book drom DB with id_book = /{id}&nbsp;&nbsp;</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id}&nbsp;&nbsp; - int</p>
-<p><strong>PUT </strong>/api/book/&nbsp;&nbsp; - modify Book with id_books = _PUT['id_book']</p>
-<p><strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>{'id_book'} &ndash; id of book to modify</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {name_book} : string</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {first_pub_year}: int</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {avarage_price}:&nbsp; float(10,2)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {id_publishing_house}: int</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {list_genre} &ndash; array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; { list_autors } &ndash; array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)</p>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {word_count}: int</p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-<p><strong>&nbsp;</strong></p>
-<p>Test scropt is in <a href='/test/index.php'> /test/index.php </a></p>
+Install readme.
 
+1.Unzip code.zip to some directory.
+
+2.Create database on MySql Server and write credentials in api_conf.php
+
+3.Open by browrer      /install/install.php or exec library.sql in database console.
+
+ 
+
+ 
+
+ 
+
+API Documentation.
+
+All API-Call URLs starts from ‘api’   like     http://localhost/library/api/book/genre/Satire/Play
+
+Book method.
+
+GET   /api/book/ -return list of all books
+
+GET   /api/book/{id} -return book with book_id ={id}
+
+                {id} - int
+
+GET   /api/book/author/{name} -return book with book author name = {name}
+
+                {name} - string
+
+GET   /api/book/name/{name} -return book with book name = {name}
+
+                {name} - string
+
+GET   /api/book/genre/{name1}/{name2}/…/{nameN} …  - return book with book genre name = { genre1 } and genre name  = { genre2 } and genre name = { genreN }
+
+                {name1} - string
+
+                {name2} - string
+
+                {nameN} - string
+
+POST /api/book/   - create new Book
+
+                {name_book} : string
+
+                {first_pub_year}: int
+
+                {avarage_price}:  float(10,2)
+
+                {id_publishing_house}: int
+
+                {list_genre} – array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)
+
+                { list_autors } – array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)
+
+                {word_count}: int
+
+DELETE /api/book/{id}   - remove book drom DB with id_book = /{id}  
+
+                {id}   - int
+
+PUT /api/book/   - modify Book with id_books = _PUT['id_book']
+
+                {'id_book'} – id of book to modify
+
+                {name_book} : string
+
+                {first_pub_year}: int
+
+              {avarage_price}:  float(10,2)
+
+                {id_publishing_house}: int
+
+                {list_genre} – array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)
+
+                { list_autors } – array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)
+
+                {word_count}: int
