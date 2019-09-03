@@ -1,1 +1,89 @@
+Install readme.
+
+1.Unzip code.zip to some directory.
+
+2.Create database on MySql Server and write credentials in api_conf.php
+
+3.Open by browrer      /install/install.php or exec library.sql in database console.
+
  
+
+ 
+
+ 
+
+API Documentation.
+
+All API-Call URLs starts from ‘api’   like     http://localhost/library/api/book/genre/Satire/Play
+
+Book method.
+
+GET   /api/book/ -return list of all books
+
+GET   /api/book/{id} -return book with book_id ={id}
+
+                {id} - int
+
+GET   /api/book/author/{name} -return book with book author name = {name}
+
+                {name} - string
+
+GET   /api/book/name/{name} -return book with book name = {name}
+
+                {name} - string
+
+GET   /api/book/genre/{name1}/{name2}/…/{nameN} …  - return book with book genre name = { genre1 } and genre name  = { genre2 } and genre name = { genreN }
+
+                {name1} - string
+
+                {name2} - string
+
+                {nameN} - string
+
+POST /api/book/   - create new Book
+
+                {name_book} : string
+
+                {first_pub_year}: int
+
+                {avarage_price}:  float(10,2)
+
+                {id_publishing_house}: int
+
+                {list_genre} – array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)
+
+                { list_autors } – array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)
+
+                {word_count}: int
+
+DELETE /api/book/{id}   - remove book drom DB with id_book = /{id}  
+
+                {id}   - int
+
+PUT /api/book/   - modify Book with id_books = _PUT['id_book']
+
+                {'id_book'} – id of book to modify
+
+                {name_book} : string
+
+                {first_pub_year}: int
+
+              {avarage_price}:  float(10,2)
+
+                {id_publishing_house}: int
+
+                {list_genre} – array of int index of genre (list_ genre []:10 list_ genre []:1 10 list_ genre []:3)
+
+                { list_autors } – array of int index of autors (list_ autors []:10 list_ autors []:1 10 list_autors[]:3)
+
+                {word_count}: int
+
+ 
+
+ 
+
+ 
+
+ 
+
+Test scropt is in /test/index.php

@@ -11,7 +11,7 @@ class APIController
 
    public function run(){
 		if(strpos($_SERVER['REQUEST_URI'],'/api/') === false  )
-		{ echo file_get_contents("readme.htm");die(); }
+		{ echo file_get_contents("firstpage.htm");die(); }
 		else
 		{    
 			$requestParam = $this->ParseParam($_SERVER['REQUEST_URI']);
